@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		94CD0EFF283EBA5300274A59 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94CD0EFE283EBA5300274A59 /* main.cpp */; };
+		94CD0F09283EBACF00274A59 /* libsfml-graphics.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 94CD0F06283EBACF00274A59 /* libsfml-graphics.2.5.1.dylib */; };
+		94CD0F0A283EBACF00274A59 /* libsfml-system.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 94CD0F07283EBACF00274A59 /* libsfml-system.2.5.1.dylib */; };
+		94CD0F0B283EBACF00274A59 /* libsfml-window.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 94CD0F08283EBACF00274A59 /* libsfml-window.2.5.1.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		94CD0EFB283EBA5300274A59 /* TheChaosGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TheChaosGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CD0EFE283EBA5300274A59 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		94CD0F06283EBACF00274A59 /* libsfml-graphics.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-graphics.2.5.1.dylib"; path = "ExternalLibraries/SFML/lib/libsfml-graphics.2.5.1.dylib"; sourceTree = "<group>"; };
+		94CD0F07283EBACF00274A59 /* libsfml-system.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-system.2.5.1.dylib"; path = "ExternalLibraries/SFML/lib/libsfml-system.2.5.1.dylib"; sourceTree = "<group>"; };
+		94CD0F08283EBACF00274A59 /* libsfml-window.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-window.2.5.1.dylib"; path = "ExternalLibraries/SFML/lib/libsfml-window.2.5.1.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94CD0F09283EBACF00274A59 /* libsfml-graphics.2.5.1.dylib in Frameworks */,
+				94CD0F0A283EBACF00274A59 /* libsfml-system.2.5.1.dylib in Frameworks */,
+				94CD0F0B283EBACF00274A59 /* libsfml-window.2.5.1.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +52,7 @@
 			children = (
 				94CD0EFD283EBA5300274A59 /* TheChaosGame */,
 				94CD0EFC283EBA5300274A59 /* Products */,
+				94CD0F05283EBACF00274A59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +70,16 @@
 				94CD0EFE283EBA5300274A59 /* main.cpp */,
 			);
 			path = TheChaosGame;
+			sourceTree = "<group>";
+		};
+		94CD0F05283EBACF00274A59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94CD0F06283EBACF00274A59 /* libsfml-graphics.2.5.1.dylib */,
+				94CD0F07283EBACF00274A59 /* libsfml-system.2.5.1.dylib */,
+				94CD0F08283EBACF00274A59 /* libsfml-window.2.5.1.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +259,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/ExternalLibraries/SFML/include";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ExternalLibraries/SFML/lib",
+				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +273,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/ExternalLibraries/SFML/include";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ExternalLibraries/SFML/lib",
+				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
